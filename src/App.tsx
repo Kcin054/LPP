@@ -1,18 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-// import "./App.css";
-import Navbar from "./Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Full from "./Navbar"
-import Satisfaction from "./Satisfaction";
+import Page from "./Page/Page";
+import EmotionPage from "./Page/EmotionPage";
+import StarPage from "./Page/StarPage";
+import Question from "./components/question";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Full />}>
-          <Route path="/Satisfaction" element={<Satisfaction />}/>
+          <Route path="/question" element={<Question/>}/>
+          <Route path="/page" element={<Page />}/>
+          <Route path="/emotionPage" element={<EmotionPage />}/>
+          <Route path="/starPage" element={<StarPage />}/>
         </Route>
       </Routes>
     </BrowserRouter>
